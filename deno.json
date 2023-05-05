@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "run": "deno run --allow-read --allow-write --allow-env src/main.ts",
+    "run:fast": "FAST=true deno task --quiet run",
+    "compile": "deno compile --allow-read --allow-write --allow-env src/main.ts --output ./geg"
+  }
+}
