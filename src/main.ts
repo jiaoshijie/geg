@@ -27,9 +27,9 @@ if (output_path === undefined) {
   output_path = await Deno.makeTempFile({prefix: "geg_", suffix: ".html"})
 }
 
-let index_before = await Deno.readTextFile("./resources/index_before.html")
+let index_before = await Deno.readTextFile(Deno.cwd() + "/resources/index_before.html")
 let content = render(await Deno.readTextFile(input_path))
-let index_after = await Deno.readTextFile("./resources/index_after.html")
+let index_after = await Deno.readTextFile(Deno.cwd() + "/resources/index_after.html")
 
 let new_html = index_before + content + index_after
 
